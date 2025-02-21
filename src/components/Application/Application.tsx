@@ -11,7 +11,7 @@ const Application = () => {
         <form action="">
             <div>
                 <label htmlFor="name">Name</label>
-                <input type="text" id='name' placeholder='FullName' value={'Chandru'} onChange={()=>{}}/>
+                <input type="text" id='name' placeholder='FullName' value={'Chandru'} readOnly/>
             </div>
             <div>
                 <label htmlFor="bio">Bio</label>
