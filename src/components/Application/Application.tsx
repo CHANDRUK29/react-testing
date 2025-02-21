@@ -2,10 +2,17 @@ import React from 'react'
 
 const Application = () => {
     return (
+        <>
+        <h1>Job Application Form</h1>
+        <h2>Step 1</h2>
         <form action="">
             <div>
                 <label htmlFor="name">Name</label>
                 <input type="text" id='name' />
+            </div>
+            <div>
+                <label htmlFor="bio">Bio</label>
+                <textarea name='bio' id='bio' />
             </div>
             <div>
                 <label htmlFor="job-location">Job Location</label>
@@ -26,6 +33,7 @@ const Application = () => {
             </div>
             <button>Submit</button>
         </form>
+        </>
     )
 }
 
