@@ -14,6 +14,16 @@ describe('Application', () => {
         });
         expect(sectionHeading).toBeInTheDocument();
 
+        // getByText
+        const paragraphElement = screen.getByText('All Fields Are Mandatory');
+        expect(paragraphElement).toBeInTheDocument();
+        
+        const closeElement = screen.getByTitle('close');
+        expect(closeElement).toBeInTheDocument();
+
+        const imageElement = screen.getByAltText('an person');
+        expect(imageElement).toBeInTheDocument();
+
         const nameElement = screen.getByRole('textbox',{
             name:"Name"
         });
@@ -22,6 +32,14 @@ describe('Application', () => {
         // get by label text   
         const nameElement2 = screen.getByLabelText('Name');
         expect(nameElement2).toBeInTheDocument();
+        
+        // get by place holder text
+        const nameElement3 = screen.getByPlaceholderText('FullName');
+        expect(nameElement3).toBeInTheDocument();
+        
+        //get by display value
+        const nameElement4 = screen.getByDisplayValue('Chandru');
+        expect(nameElement4).toBeInTheDocument();
 
         const textAreaElement = screen.getByRole('textbox',{
             name:"Bio"
