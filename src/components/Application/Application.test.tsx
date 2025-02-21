@@ -17,10 +17,12 @@ describe('Application', () => {
         // getByText
         const paragraphElement = screen.getByText('All Fields Are Mandatory');
         expect(paragraphElement).toBeInTheDocument();
-        
+
+        //getByTitle        
         const closeElement = screen.getByTitle('close');
         expect(closeElement).toBeInTheDocument();
 
+        //getByAltText
         const imageElement = screen.getByAltText('an person');
         expect(imageElement).toBeInTheDocument();
 
@@ -41,6 +43,7 @@ describe('Application', () => {
         const nameElement4 = screen.getByDisplayValue('Chandru');
         expect(nameElement4).toBeInTheDocument();
 
+        
         const textAreaElement = screen.getByRole('textbox',{
             name:"Bio"
         });
