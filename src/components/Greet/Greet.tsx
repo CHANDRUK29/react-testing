@@ -1,8 +1,10 @@
 import React from 'react'
+import { GreetProps } from './Greet.types'
 
-const Greet = () => {
+
+const Greet = (props: GreetProps) => {
   return (
-    <div>Greet</div>
+    <div>Hello {props.name}</div>
   )
 }
 
