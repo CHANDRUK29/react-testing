@@ -4,6 +4,7 @@ describe('Application', () => {
     test("renders correctly", () => {
         render(<Application/>)
 
+        // getByRole
         const pageHeading = screen.getByRole('heading',{
             level:1
         });
@@ -43,7 +44,6 @@ describe('Application', () => {
         const nameElement4 = screen.getByDisplayValue('Chandru');
         expect(nameElement4).toBeInTheDocument();
 
-        
         const textAreaElement = screen.getByRole('textbox',{
             name:"Bio"
         });
