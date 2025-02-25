@@ -52,3 +52,18 @@ These queries are asynchronous and return a promise that resolves when the eleme
 6) getByAltText
 7) getByTitle
 8) getByTestId
+
+
+## Key Differences between `getBy`, `queryBy`, and `findBy` in React Testing Library (RTL) Queries
+
+## Overview
+
+In React Testing Library (RTL), there are three primary types of queries to interact with DOM elements: `getBy`, `queryBy`, and `findBy`. These queries differ in how they handle element searching, especially when elements may be missing or rendered asynchronously.
+
+## Key Differences
+
+| **Query Type**     | **Behavior if Element is Not Found**                | **When to Use**                                    | **Sync/Async**  |
+|--------------------|------------------------------------------------------|----------------------------------------------------|-----------------|
+| **`getBy`**         | Throws an error if no element is found               | When the element should be **immediately** present in the DOM and is **required**. | Synchronous    |
+| **`queryBy`**       | Returns `null` if no element is found (does not throw an error)     | When the element **may not exist**, or you want to check if it's missing. | Synchronous    |
+| **`findBy`**        | Returns a promise that resolves when the element is found | When the element is rendered **asynchronously**, like after an API call or timeout. | Asynchronous   |
